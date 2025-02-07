@@ -1,0 +1,480 @@
+﻿/* #region General */
+
+h2 {
+    font-weight: bold;
+}
+
+h2::after {
+    background: #b71c1c;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 10px auto 0;
+    width: 80px;
+}
+
+/* #endregion */
+
+/* #region Class */
+
+.about-artist {
+    background-color: #fff4e6;
+    padding: 0 0 60px 0;
+    text-align: center;
+}
+
+.about-artist .container {
+    padding: 0;
+}
+
+.about-text {
+    padding-left: calc(var(--bs-gutter-x, 0.75rem) + 20px);
+    padding-right: calc(var(--bs-gutter-x, 0.75rem) + 20px);
+}
+
+.about-text h2 {
+    color: #b71c1c;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.address-box {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.address-box i {
+    color: #b71c1c;
+    font-size: 24px; 
+    margin-bottom: 5px;
+}
+
+.address-box p {
+    font-weight: 500;
+    margin: 0;
+}
+
+.artist-certifications {
+    background-color: #f8f8f8;
+    padding: 0 0 60px 0;
+    text-align: center;
+}
+
+.artist-certifications .container {
+    padding: 0;
+}
+
+.artist-certifications h2 {
+    color: #b71c1c;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding: 60px 20px 0 20px;
+}
+
+.artist-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.benefits-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    margin-top: 10px;
+}
+
+.button-container .btn {
+    background-color: #fff4e6;
+    border: 2px solid #b71c1c;
+    border-radius: 30px;
+    color: #b71c1c;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.button-container .btn:active {
+    transform: scale(0.95);
+}
+
+.button-container .btn:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+    color: white;
+}
+
+.certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.certification-item {
+    align-items: center;
+    border-bottom: 2px solid #b71c1c;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+    font-weight: bold;
+    justify-content: flex-start;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.certification-item:nth-child(odd) {
+    background: #fff4e6;
+}
+
+.certification-item:nth-child(even) {
+    background: white;
+}
+
+.certification-item:last-child {
+    border-bottom: none;
+}
+
+.certification-item img {
+    border-radius: 50%;
+    height: 80px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    width: 80px;
+}
+
+.certification-item p {
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.certification-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);   
+}
+
+.contact-link {
+    color: #b71c1c;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #a31a1a;
+    text-decoration: underline;
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.3);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 330px;
+    z-index: 1;
+}
+
+.info-item::before {
+    background: linear-gradient(45deg, #b71c1c, #ff9800);
+    border-radius: 12px;
+    content: "";
+    inset: 0;
+    mask-composite: exclude;
+    padding: 2px;
+    position: absolute;
+    z-index: -1;
+
+    /* Pour Chrome, Safari, Edge */
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+
+    /* Pour Firefox */
+    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    mask-composite: exclude; 
+}
+
+.info-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);   
+}
+
+.info-item .button-container .btn {
+    font-size: 1rem;
+    
+}
+
+.info-item .contact p {
+    font-size: 1.1rem;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.info-item h3 {
+    color: #b71c1c;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.info-item h3::after {
+    background: #b71c1c;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 8px auto 0;
+    width: 50px;
+}
+
+.introduction {
+    background: url('images/introduction_bg.webp') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+}
+
+.introduction::before {
+    background: rgba(0, 0, 0, 0.4);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.introduction .container {
+    position: relative;
+    z-index: 2;
+}
+
+.introduction h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introduction h1, .introduction p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.introduction h1, .introduction p, .introduction .button-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.practical-info {
+    background-color: #fff4e6;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.practical-info h2 {
+    color: #b71c1c;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.why-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.why-text h2 {
+    color: #b71c1c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.why-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.why-tricopigmentation {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* #endregion */
+
+@media (min-width: 435px) {
+    /* #region Class */
+
+    .about-artist {
+        padding: 60px 20px;
+    }
+
+    .about-artist .container {
+        padding-left: var(--bs-gutter-x, .75rem);
+        padding-right: var(--bs-gutter-x, .75rem);
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .artist-certifications {
+        padding: 60px 20px;
+    }
+
+    .artist-image {
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+    }
+
+    .certifications-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .certification-item {
+        background: white !important;
+        border: 2px solid #b71c1c !important;
+        flex-direction: column;
+        justify-content: center;
+        width: 330px;
+    }
+
+    .introduction h1 {
+        font-size: 2.0rem;
+    }
+
+    /* #endregion */
+}
+
+@media (min-width: 768px) {
+    /* #region Class */
+
+    .benefits-list {
+        display: block;
+        text-align: left;
+    }
+
+    .button-container .btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .introduction {
+        padding: 100px 0;
+    }
+
+    .introduction h1 {
+        font-size: 2.8rem;
+    }
+
+    .introduction p {
+        font-size: 1.3rem;
+    }
+
+    .why-text {
+        padding-left: 30px;
+    }
+
+    .why-tricopigmentation .row {
+        align-items: center;
+        display: flex;
+        text-align: left;
+    }
+
+    /* #endregion */
+}
+
+@media (min-width: 1200px) {
+    /* #region Class */
+
+    .btn-secondary {
+        margin-top: 20px;
+    }
+
+    .introduction .container {
+        max-width: 960px;
+    }
+
+    .why-text {
+        padding-right: 50px;
+        text-align: left;
+    }
+
+    .why-tricopigmentation .row {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* #endregion */
+}
+
+@media (min-width: 1400px) {
+    /* #region Class */
+
+    .why-text h2 {
+        text-align: left;
+    }
+
+    /* #endregion */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

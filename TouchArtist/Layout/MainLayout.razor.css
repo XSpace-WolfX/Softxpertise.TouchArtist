@@ -1,0 +1,71 @@
+/* #region General */
+
+main {
+    flex: 1;
+}
+
+/* #endregion */
+
+/* #region Class */
+
+.footer {
+    background-color: #b71c1c;
+    /*background: linear-gradient(to bottom, #fff4e6, #fff4e6);*/
+    color: white;
+}
+
+.menu {
+    background-color: #b71c1c;
+    z-index: 3;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-width: 235px;
+    position: relative;
+}
+
+/* #endregion */
+
+@media (min-width: 641px) {
+    /* #region Class */
+
+    /* Horizontal menu display */
+    .menu {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    /* #endregion */
+}
+
+/* Standard desktop and up */
+@media (min-width: 1280px) {
+    /* #region Class */
+
+    .menu {
+        padding: 0 4rem;
+    }
+
+    /* #endregion */
+}
+
+/* Large screen and up */
+@media (min-width: 1440px) {
+    /* #region Class */
+
+    .menu {
+        padding: 0 9.75rem;
+    }
+
+    /* #endregion */
+}

@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="menu">
+        <NavMenu />
+    </div>
+
+    <main>
+        <article>
+            @Body
+        </article>
+    </main>
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- À propos -->
+                <div class="col-md-4 padding">
+                    <p>Touch'd'Artist</p>
+                </div>
+                <!-- Liens de Navigation -->
+                <div class="col-md-4 pad-top">
+                    <h5 class="text-uppercase">Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white text-decoration-none">Accueil</a></li>
+                        <li><a href="/tricopigmentation" class="text-white text-decoration-none">Tricopigmentation</a></li>
+                        <li><a href="/contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Coordonnées et Réseaux -->
+                <div class="col-md-4 pad-top">
+                    <h5 class="text-uppercase">Contactez-moi</h5>
+                    <p>Email: <a href="mailto:contact@artiste-alicedacosta.eu" class="text-white">contact@artiste-alicedacosta.eu</a></p>
+                    <p>Téléphone : <a href="tel:+33638251847" class="text-white">+33 6 38 25 18 47</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">© 2025 Touch'd'Artist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>

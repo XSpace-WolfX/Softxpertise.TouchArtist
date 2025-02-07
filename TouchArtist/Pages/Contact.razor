@@ -1,0 +1,106 @@
+﻿@page "/contact"
+
+<section class="contact">
+    <div class="container">
+        <h1>Contactez-moi</h1>
+        <section class="contact-info">
+            <p><strong>Email :</strong> <a href="mailto:contact@artiste-alicedacosta.eu">contact@artiste-alicedacosta.eu</a></p>
+            <p><strong>Téléphone :</strong> <a href="tel:+33638251847">+33 6 38 25 18 47</a></p>
+        </section>
+        <div class="contact-form">
+            <form @onsubmit="HandleSubmit">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" @bind="Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" @bind="Email" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" @bind="Subject" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" @bind="Message" rows="5" required></textarea>
+                </div>
+                @* <div class="form-group">
+                    <input type="checkbox" id="rgpd" @bind="RGPDConsent" required />
+                    <label for="rgpd">J'accepte la politique de confidentialité</label>
+                </div> *@
+                <button type="submit">Envoyer</button>
+                <div class="alert" style="display: @(ShowMessage ? "block" : "none"); color: @(Success ? "green" : "red");">
+                    @MessageText
+                </div>
+            </form>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2909.229602078127!2d2.9973934766117485!3d43.18369298266996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1ac67d494cbdd%3A0xd404e81c54eedb05!2s21%20Rue%20Voltaire%2C%2011100%20Narbonne%2C%20France!5e0!3m2!1sen!2see!4v1738604642279!5m2!1sen!2see"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+@code {
+    private string Name { get; set; } = "";
+    private string Email { get; set; } = "";
+    private string Subject { get; set; } = "";
+    private string Message { get; set; } = "";
+    private bool RGPDConsent { get; set; } = false;
+    private HttpClient _httpClient = new HttpClient();
+    private bool ShowMessage { get; set; } = false;
+    private bool Success { get; set; } = false;
+    private string MessageText { get; set; } = "";
+
+    private async Task HandleSubmit()
+    {
+        // if (!RGPDConsent)
+        // {
+        //     Console.WriteLine("Vous devez accepter la politique de confidentialité.");
+        //     return;
+        // }
+
+        var formData = new Dictionary<string, string>
+        {
+            { "name", Name },
+            { "email", Email },
+            { "subject", Subject },
+            { "message", Message }
+        };
+
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://formspree.io/f/manqbjvy") // Test : https://formspree.io/f/mgvozyjl  Prod (Alice)  https://formspree.io/f/manqbjvy
+        {
+            Content = new FormUrlEncodedContent(formData)
+        };
+
+        request.Headers.Add("Accept", "application/json");
+
+        var response = await _httpClient.SendAsync(request);
+
+        ShowMessage = true;
+        if (response.IsSuccessStatusCode)
+        {
+            Success = true;
+            MessageText = "Email envoyé avec succès !";
+            ResetForm();
+        }
+        else
+        {
+            Success = false;
+            MessageText = "Erreur lors de l'envoi du message.";
+        }
+    }
+
+    private void ResetForm()
+    {
+        Name = "";
+        Email = "";
+        Subject = "";
+        Message = "";
+        RGPDConsent = false;
+    }
+}

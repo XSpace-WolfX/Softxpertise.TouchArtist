@@ -1,0 +1,365 @@
+﻿/* #region General */
+
+h2 {
+    font-weight: bold;
+}
+
+h2::after {
+    background: #b71c1c;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 10px auto 0;
+    width: 80px;
+}
+
+/* #endregion */
+
+/* #region Class */
+
+.accordion {
+    margin-bottom: 40px;
+}
+
+.accordion-body {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.accordion-button {
+    background: #b71c1c;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background: #9e1616;
+}
+
+.accordion-item {
+    background: white;
+    border: 1px solid #b71c1c;
+    margin-bottom: 10px;
+}
+
+.advantage {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    width: 300px;
+}
+
+.advantage:hover {
+    background: #b71c1c;
+    color: white;
+}
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.button-container .btn {
+    background-color: #fff4e6;
+    border: 2px solid #b71c1c;
+    border-radius: 30px;
+    color: #b71c1c;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.button-container .btn:active {
+    transform: scale(0.95);
+}
+
+.button-container .btn:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+    color: white;
+}
+
+.consultation-note {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.faq-section {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    color: #b71c1c;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq-section .intro {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto 40px;
+    max-width: 800px;
+}
+
+.image-container {
+    margin-top: 40px;
+}
+
+.image-container img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+}
+
+.introduction {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.introduction h1 {
+    color: #b71c1c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    max-width: 800px;
+}
+
+.photo-guidelines {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.photo-guidelines strong {
+    color: #b71c1c;
+}
+
+.photo-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.photo-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-list li::before {
+    content: "📷"; /* Icône caméra */
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.process-section {
+    background: #fff4e6;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.process-section h2 {
+    color: #b71c1c;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.process-section .intro {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto 40px;
+    max-width: 800px;
+}
+
+.process-steps {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.step {
+    background: #fff4e6;
+    border-bottom: 2px solid #b71c1c;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #b71c1c;
+    max-width: 350px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    width: 90%;
+}
+
+.step:hover {
+    background: #b71c1c;
+    color: white;
+}
+
+.step:hover h3, 
+.step:hover p {
+    color: white;
+}
+
+.step:first-child {
+    border-top: none;
+}
+
+.step:last-child {
+    border-bottom: none;
+}
+
+.step h3 {
+    color: #b71c1c;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.tricopigmentation {
+    background: url('images/tricopigmentation.webp') no-repeat center;
+    background-size: cover;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.tricopigmentation::before {
+    background: rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.tricopigmentation h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tricopigmentation h2::after {
+    background: white;
+}
+
+.tricopigmentation h2, .tricopigmentation .intro {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.tricopigmentation .intro {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 auto 40px;
+    max-width: 800px;
+}
+
+/* #endregion */
+
+@media (min-width: 435px) {
+    /* #region Class */
+
+    .introduction h1 {
+        font-size: 2.0rem;
+    }
+
+    /* #endregion */
+}
+
+@media (min-width: 768px) {
+    /* #region Class */
+
+    .button-container .btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .introduction h1 {
+        font-size: 2.8rem;
+    }
+
+    .introduction p {
+        font-size: 1.3rem;
+    }
+
+    .process-steps {
+        align-items: stretch !important;
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: center;
+    }
+
+    .step {
+        background: #fff4e6;
+        border-bottom: none !important;
+        border-left: 2px solid #b71c1c !important;
+        border-right: 2px solid #b71c1c !important;
+        border-top: none !important;
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        width: 320px;
+    }
+
+    .step:first-child {
+        border-left: none !important;
+    }
+
+    .step:last-child {
+        border-right: none !important;
+    }
+
+    /* #endregion */
+}
+
+@media (min-width: 1024px) {
+    /* #region Class */
+
+    .process-steps {
+        flex-direction: row;
+    }
+
+    /* #endregion */
+}
